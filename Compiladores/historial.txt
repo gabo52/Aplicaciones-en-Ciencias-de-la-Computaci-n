@@ -1,0 +1,244 @@
+    1  <>flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    2  200~sudo dnf install -y flatpak
+    3  sudo dnf install -y flatpak
+    4  flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    5  cd dow
+    6  ls
+    7  cd Download
+    8  ls
+    9  cd Downloads
+   10  ls
+   11  sudo rpm -i wps-office-11.1.0.11691.XA-1.x86_64.rpm 
+   12  sudo passwd root
+   13  sudo apt-get remove wps-office
+   14  cd Downloads
+   15  chmod +x teamviewer_15.40.8.x86_64.rpm
+   16  sudo dnf install ./teamviewer_15.40.8.x86_64.rpm 
+   17  car /etc/fedora-release
+   18  cat /etc/fedora-release
+   19  cat /etc/fedora-release:
+   20  cat /etc/fedora-release
+   21  cat /etc/os-release
+   22  sudo apt-get purge wps-office 
+   23  sudo install apt-get
+   24  wget http://security.ubuntu.com/ubuntu/pool/main/a/apt/apt_1.0.1ubuntu2.17_amd64.deb -O apt.deb
+   25  sudo dpkg -i apt.deb
+   26  pkexec dpkg -i apt.deb
+   27  cd Downloads
+   28  pkexec dpkg -i apt.deb
+   29  sudo apt-get purge wps-office
+   30  sudo snap remove wps-office
+   31  cd
+   32  sudo dnf install snapd
+   33  sudo ln -s/var/lib/snapd/snal /snap
+   34  sudo ln -s/var/lib/snapd/snap /snap
+   35  sudo ln -s /var/lib/snapd/snap/ snap
+   36  snap version
+   37  snap search vlc
+   38  sudo snap install vlc
+   39  vl
+   40  vlc
+   41  sudo snap install package
+   42  vlc
+   43  cd snap
+   44  vlc
+   45  cd
+   46  snap list
+   47  sudo snap remove wps-office
+   48  cd
+   49  sudo snap remove wps-office
+   50  sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
+   51  sudo dnf install lame\* --exclude=lame-devel
+   52  sudo dnf group upgrade --with-optional Multimedia
+   53  passwd
+   54  sudo nano /etc/dnf/dnf.conf
+   55  sudo dnf update
+   56   sudo reboot
+   57  reboot
+   58  dnf install git-all
+   59  sudo dnf install git-all
+   60  git inf
+   61  git version
+   62  sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+   63  sudo dnf update
+   64  sudo dnf install discord
+   65  sudo dnf install bluez*
+   66  sudo modprobe btusb
+   67  sudo systemctl restar bluetooth
+   68  sudo systemctl restart bluetooth
+   69  sudo nano/etc/bluetooth/main.conf
+   70  sudo nano /etc/bluetooth/main.conf
+   71  reboot
+   72  sudo systemctl restar bluetooth
+   73  sudo nano /etc/bluetooth/main.conf
+   74  sudo /etc/init.d/bluetooth restart
+   75  sudo nano /etc/init.d/bluetooth restart
+   76  sudo nano /etc/bluetooth/main.conf
+   77  sudo systemctl restar bluetooth
+   78  sudo systemctl restart bluetooth
+   79  man fork
+   80  sudo dnf install git
+   81  sudo yum install git
+   82  git -version
+   83  git-version
+   84  git –version
+   85  git version
+   86  git config --global user.name "Tu nombre"
+   87  git config --global user.name "Gabo"
+   88  git config --global user.email "ejemplo@email.com"
+   89  sudo cp /etc/bluetooth/main.conf /etc/bluetooth/main.bak
+   90  sudo gedit /etc/bluetooth/main.conf
+   91  sudo dnf gedit
+   92  sudo dnf install gedit
+   93  sudo gedit /etc/bluetooth/main.conf
+   94  reboot
+   95  cd 
+   96  le
+   97  ls
+   98  cd Documents/
+   99  ls
+  100  vim
+  101  vivviviiviviv werkfj wddwefwerddddqqcd
+  102  c
+  103  exit
+  104  vim notas.txt
+  105  cat notas.txt
+  106  vim notaslp.txt
+  107  vim notaslp.c
+  108  exit
+  109  mfile
+  110  man file
+  111  cfile notas.txt
+  112  sudo dnf install sublime-text
+  113  sudo rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
+  114  sudo dnf config-manager --add-repo https://download.sublimetext.com/rpm/dev/x86_64/sublime-text.repo
+  115  sudo dnf install sublime-text
+  116  sudo rm -R /opt/Sublime\ Text\ 2
+  117  ls
+  118  ls -l
+  119  cd Desktop/lp2/clase 4
+  120  cd Desktop
+  121  cd lp2
+  122  ls
+  123  cd Clase 4
+  124  cd Clase4
+  125  ls
+  126  javac paqueteA/*.java paqueteC/*java
+  127  javac -cp paqueteA/*.java paqueteC/*java
+  128  cd
+  129  dir
+  130  ls
+  131  cd Downloads
+  132  sudo dnf install jdk-8u151-linux-x64.rpm 0
+  133  sudo dnf install jdk-8u151-linux-x64.rpm 
+  134  sudo rpm install jdk-8u151-linux-x64.rpm 
+  135  sudo rpm -i jdk-8u151-linux-x64.rpm 
+  136  javac
+  137  lscpu
+  138  top
+  139  cd
+  140  ls
+  141  nano .bashrc
+  142  sudo dnf install jdk-8u151-linux-x64.rpm
+  143  cd Downloads
+  144  sudo dnf install jdk-8u151-linux-x64.rpm
+  145  sudo dnf install jdk-8u151-linux-x64
+  146  ls
+  147  cd
+  148  sudo dnf install jdk-8u151-linux-x64
+  149  cd Downloads
+  150  sudo dnf install jdk-8u151-linux-x64
+  151  dnf search jdk
+  152  man search
+  153  man fork
+  154  man dnf
+  155  dnf search openjdk
+  156  cd /
+  157  ls
+  158  cd usr/
+  159  ls
+  160  cd java/
+  161  ls
+  162  cd jdk1.8.0_151/
+  163  ls
+  164  pwd
+  165  cd
+  166  ls
+  167  cd Desktop/lp2
+  168  ls
+  169  cd Clase4
+  170  ls
+  171  java
+  172  time
+  173  tim 0
+  174  time 0
+  175  time 1
+  176  man time
+  177  man sudo
+  178  cd /home/gabo52/.var/app/us.zoom.Zoom/config/
+  179  ls -a
+  180  nano zoomus.conf
+  181  exit
+  182  terminal
+  183  time
+  184  man time
+  185  time Jan 1
+  186  Jan
+  187  man time
+  188  time --help
+  189  --help time
+  190  time -help
+  191  gnome-volume-control
+  192  cd Desktop
+  193  cd 7moCiclo
+  194  cd Aplica
+  195  cd Clase2
+  196  cd
+  197  cd ..
+  198  cd.
+  199  ls
+  200  cd gabo52
+  201  ls
+  202  cd Desktop/7moCiclo/Aplica
+  203  ls
+  204  cd Proyecto
+  205  yacc basico.y
+  206  gcc y.tab.c -lm -ldl
+  207  yacc basico.y
+  208  gcc y.tab.c -lm -ldl
+  209  clear
+  210  gcc y.tab.c -lm -ldl
+  211  yacc basico.y
+  212  gcc y.tab.c -lm -ldl
+  213  cd Desktop/Aplica/Proyecto
+  214  cd Desktop
+  215  cd APlica
+  216  cd Aplica
+  217  ls
+  218  cd 7moCiclo/Aplica/Proyecto
+  219  yacc basico.y
+  220  gcc y.tab.c -lm -ldl
+  221  yacc basico.y
+  222  gcc y.tab.c -lm -ldl
+  223  clear
+  224  yacc basico.y
+  225  gcc y.tab.c -lm -ldl
+  226  flatpak install flathub com.obsproject.Studio
+  227  flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  228      
+  229  flatpak install flathub com.obsproject.Studio
+  230  cd 7moCiclo/Aplica/Proyecto
+  231  ls
+  232  cd Desktop
+  233  cd 7moCiclo/Aplica/Proyecto
+  234* 
+  235  bash compila.sh
+  236  amogus()
+  237  bash compila.sh
+  238  tree basico.y
+  239  man tree
+  240  tree -l basico.y
+  241  yacc -dv archivo.y
+  242  yacc -dv basico.y
+  243  lsb_release -a > mi_release.txt
+  244  history > historial.txt

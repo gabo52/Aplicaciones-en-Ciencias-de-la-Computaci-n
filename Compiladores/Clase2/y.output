@@ -1,0 +1,370 @@
+   0  $accept : programa $end
+
+   1  programa : listInst
+
+   2  listInst : instr listInst
+   3           |
+
+   4  $$1 :
+
+   5  instr : ID $$1 IGUAL expr
+
+   6  expr : expr SUMA term
+   7       | expr RESTA term
+   8       | term
+
+   9  term : term MUL factor
+  10       | term DIV factor
+  11       | factor
+
+  12  factor : PARIZQ expr PARDER
+  13         | NUMENT
+  14         | ID
+
+  15  instr : MIENTRAS PARIZQ expr PARDER bloqinst
+
+  16  bloqinst : LLAVEIZQ listInst LLAVEDER
+
+state 0
+	$accept : . programa $end  (0)
+	listInst : .  (3)
+
+	MIENTRAS  shift 1
+	ID  shift 2
+	$end  reduce 3
+
+	programa  goto 3
+	listInst  goto 4
+	instr  goto 5
+
+
+state 1
+	instr : MIENTRAS . PARIZQ expr PARDER bloqinst  (15)
+
+	PARIZQ  shift 6
+	.  error
+
+
+state 2
+	instr : ID . $$1 IGUAL expr  (5)
+	$$1 : .  (4)
+
+	.  reduce 4
+
+	$$1  goto 7
+
+
+state 3
+	$accept : programa . $end  (0)
+
+	$end  accept
+
+
+state 4
+	programa : listInst .  (1)
+
+	.  reduce 1
+
+
+state 5
+	listInst : instr . listInst  (2)
+	listInst : .  (3)
+
+	MIENTRAS  shift 1
+	ID  shift 2
+	$end  reduce 3
+	LLAVEDER  reduce 3
+
+	listInst  goto 8
+	instr  goto 5
+
+
+state 6
+	instr : MIENTRAS PARIZQ . expr PARDER bloqinst  (15)
+
+	ID  shift 9
+	NUMENT  shift 10
+	PARIZQ  shift 11
+	.  error
+
+	expr  goto 12
+	term  goto 13
+	factor  goto 14
+
+
+state 7
+	instr : ID $$1 . IGUAL expr  (5)
+
+	IGUAL  shift 15
+	.  error
+
+
+state 8
+	listInst : instr listInst .  (2)
+
+	.  reduce 2
+
+
+state 9
+	factor : ID .  (14)
+
+	.  reduce 14
+
+
+state 10
+	factor : NUMENT .  (13)
+
+	.  reduce 13
+
+
+state 11
+	factor : PARIZQ . expr PARDER  (12)
+
+	ID  shift 9
+	NUMENT  shift 10
+	PARIZQ  shift 11
+	.  error
+
+	expr  goto 16
+	term  goto 13
+	factor  goto 14
+
+
+state 12
+	expr : expr . SUMA term  (6)
+	expr : expr . RESTA term  (7)
+	instr : MIENTRAS PARIZQ expr . PARDER bloqinst  (15)
+
+	SUMA  shift 17
+	PARDER  shift 18
+	RESTA  shift 19
+	.  error
+
+
+state 13
+	expr : term .  (8)
+	term : term . MUL factor  (9)
+	term : term . DIV factor  (10)
+
+	MUL  shift 20
+	DIV  shift 21
+	$end  reduce 8
+	MIENTRAS  reduce 8
+	ID  reduce 8
+	SUMA  reduce 8
+	LLAVEDER  reduce 8
+	PARDER  reduce 8
+	RESTA  reduce 8
+
+
+state 14
+	term : factor .  (11)
+
+	.  reduce 11
+
+
+state 15
+	instr : ID $$1 IGUAL . expr  (5)
+
+	ID  shift 9
+	NUMENT  shift 10
+	PARIZQ  shift 11
+	.  error
+
+	expr  goto 22
+	term  goto 13
+	factor  goto 14
+
+
+state 16
+	expr : expr . SUMA term  (6)
+	expr : expr . RESTA term  (7)
+	factor : PARIZQ expr . PARDER  (12)
+
+	SUMA  shift 17
+	PARDER  shift 23
+	RESTA  shift 19
+	.  error
+
+
+state 17
+	expr : expr SUMA . term  (6)
+
+	ID  shift 9
+	NUMENT  shift 10
+	PARIZQ  shift 11
+	.  error
+
+	term  goto 24
+	factor  goto 14
+
+
+state 18
+	instr : MIENTRAS PARIZQ expr PARDER . bloqinst  (15)
+
+	LLAVEIZQ  shift 25
+	.  error
+
+	bloqinst  goto 26
+
+
+state 19
+	expr : expr RESTA . term  (7)
+
+	ID  shift 9
+	NUMENT  shift 10
+	PARIZQ  shift 11
+	.  error
+
+	term  goto 27
+	factor  goto 14
+
+
+state 20
+	term : term MUL . factor  (9)
+
+	ID  shift 9
+	NUMENT  shift 10
+	PARIZQ  shift 11
+	.  error
+
+	factor  goto 28
+
+
+state 21
+	term : term DIV . factor  (10)
+
+	ID  shift 9
+	NUMENT  shift 10
+	PARIZQ  shift 11
+	.  error
+
+	factor  goto 29
+
+
+state 22
+	instr : ID $$1 IGUAL expr .  (5)
+	expr : expr . SUMA term  (6)
+	expr : expr . RESTA term  (7)
+
+	SUMA  shift 17
+	RESTA  shift 19
+	$end  reduce 5
+	MIENTRAS  reduce 5
+	ID  reduce 5
+	LLAVEDER  reduce 5
+
+
+state 23
+	factor : PARIZQ expr PARDER .  (12)
+
+	.  reduce 12
+
+
+state 24
+	expr : expr SUMA term .  (6)
+	term : term . MUL factor  (9)
+	term : term . DIV factor  (10)
+
+	MUL  shift 20
+	DIV  shift 21
+	$end  reduce 6
+	MIENTRAS  reduce 6
+	ID  reduce 6
+	SUMA  reduce 6
+	LLAVEDER  reduce 6
+	PARDER  reduce 6
+	RESTA  reduce 6
+
+
+state 25
+	bloqinst : LLAVEIZQ . listInst LLAVEDER  (16)
+	listInst : .  (3)
+
+	MIENTRAS  shift 1
+	ID  shift 2
+	LLAVEDER  reduce 3
+
+	listInst  goto 30
+	instr  goto 5
+
+
+state 26
+	instr : MIENTRAS PARIZQ expr PARDER bloqinst .  (15)
+
+	.  reduce 15
+
+
+state 27
+	expr : expr RESTA term .  (7)
+	term : term . MUL factor  (9)
+	term : term . DIV factor  (10)
+
+	MUL  shift 20
+	DIV  shift 21
+	$end  reduce 7
+	MIENTRAS  reduce 7
+	ID  reduce 7
+	SUMA  reduce 7
+	LLAVEDER  reduce 7
+	PARDER  reduce 7
+	RESTA  reduce 7
+
+
+state 28
+	term : term MUL factor .  (9)
+
+	.  reduce 9
+
+
+state 29
+	term : term DIV factor .  (10)
+
+	.  reduce 10
+
+
+state 30
+	bloqinst : LLAVEIZQ listInst . LLAVEDER  (16)
+
+	LLAVEDER  shift 31
+	.  error
+
+
+state 31
+	bloqinst : LLAVEIZQ listInst LLAVEDER .  (16)
+
+	.  reduce 16
+
+
+18 terminals, 9 nonterminals
+17 grammar rules, 32 states
+
+grammar parser grammar
+symbol# value# symbol
+     0      0  $end
+     1    256  error
+     2    257  MIENTRAS
+     3    258  ID
+     4    259  IGUAL
+     5    260  NUMENT
+     6    261  SUMA
+     7    262  CAMBIOLINEA
+     8    263  PARIZQ
+     9    264  LLAVEDER
+    10    265  LLAVEIZQ
+    11    266  PARDER
+    12    267  RESTA
+    13    268  MUL
+    14    269  DIV
+    15    270  ASIGNAR
+    16    271  SUMAR
+    17    272  MULTIPLICAR
+    18    273  $accept
+    19    274  programa
+    20    275  listInst
+    21    276  instr
+    22    277  $$1
+    23    278  expr
+    24    279  term
+    25    280  factor
+    26    281  bloqinst
